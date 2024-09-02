@@ -172,9 +172,9 @@ public class Game {
         printWithTypingEffect("2. The secret number is between a range.");
         printWithTypingEffect("3. You have to guess the number in a time limit.");
         printWithTypingEffect("   Time limits for each level:");
-        printWithTypingEffect("   EASY: 15 seconds");
-        printWithTypingEffect("   MEDIUM: 12 seconds");
-        printWithTypingEffect("   HARD: 10 seconds");
+        printWithTypingEffect("   EASY: " + Level.EASY.timeLimit + " seconds");
+        printWithTypingEffect("   MEDIUM: " + Level.MEDIUM.timeLimit + " seconds");
+        printWithTypingEffect("   HARD: " + Level.HARD.timeLimit + " seconds");
         printWithTypingEffect("4. You will get hints if you are near to the number.");
         System.out.println();
         printWithTypingEffect("Press any key to start the game...");
@@ -217,9 +217,9 @@ public class Game {
     }
 
     static enum Level {
-        EASY(1, 50, 15, true),
-        MEDIUM(1, 100, 12, true),
-        HARD(1, 500, 10, true);
+        EASY(1, 50, 10, true),
+        MEDIUM(1, 100, 7, true),
+        HARD(1, 500, 5, true);
 
         final int min;
         final int max;
